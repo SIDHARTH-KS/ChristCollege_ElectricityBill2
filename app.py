@@ -4,7 +4,7 @@ import joblib
 from pathlib import Path
 
 # Load the trained model
-model_path = Path(__file__).parent / "electricity_bill_model.pkl"
+model_path = Path(__file__).parent / "electricity_bill_model2.pkl"
 model = joblib.load(model_path)
 
 # App title
