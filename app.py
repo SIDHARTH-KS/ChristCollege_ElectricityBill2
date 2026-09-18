@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Load the trained model
 model_path = Path(__file__).parent / "electricity_bill_model2.pkl"
-model = joblib.load(model_path)
+poly,model = joblib.load(model_path)
 
 # App title
 st.title("Electricity Bill Predictor")
@@ -36,6 +36,7 @@ if st.button("Predict"):
         "AC_Units": [ac_units],
         "Fan_Units": [fan_units]
     })
+    input_data_poly=poly.transform(input_data)
 
     # Predict using the trained pipeline
     prediction = model.predict(input_data)[0]
