@@ -42,9 +42,5 @@ if st.button("Predict"):
     prediction = model.predict(input_data)[0]
 
     # Display result
-    if prediction >= 0:
-        st.success(
-            f"Expected Electric Bill: ₹{prediction:.2f}"
-        )
-    else:
-        st.error("Error Occurred")
+    
+    st.success(f"Expected Electric Bill: ₹{prediction:.2f}")
