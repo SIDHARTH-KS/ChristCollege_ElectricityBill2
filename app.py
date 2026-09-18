@@ -39,7 +39,7 @@ if st.button("Predict"):
     input_data_poly=poly.transform(input_data)
 
     # Predict using the trained pipeline
-    prediction = model.predict(input_data)[0]
+    prediction = model.predict(input_data_poly)[0]
 
     # Display result
     
